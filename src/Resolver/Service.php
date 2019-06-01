@@ -78,8 +78,8 @@ class Service extends AbstractResolver
         $client = new Client($url, [
             'adapter'     => Client\Adapter\Curl::class,
             'curloptions' => [
-                CURLOPT_SSL_VERIFYHOST => $ignoreSSLErrors ? 0 : 2,
-                CURLOPT_SSL_VERIFYPEER => !$ignoreSSLErrors,
+                CURLOPT_SSL_VERIFYHOST => 0,
+                CURLOPT_SSL_VERIFYPEER => 0,
             ],
         ]);
 
